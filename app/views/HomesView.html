@@ -1,26 +1,54 @@
 <section>
-  <div class="d-flex justify-content-start p-4">
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add A House!</button>
-    <div class="collapse" id="collapseExample">
-      <div class="card card-body">
-        <form>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" />
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          Add A House!🏠🏠🏠
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body p-5">
+          <form onsubmit="app.HomesController.addHouse()">
+            description
+            <div class="mb-3">
+              <label for="description" class="form-label"></label>
+              <input type="text" class="form-control" name="description" >
+            </div>
+            bathrooms
+            <div class="mb-3">
+              <label for="description" class="form-label"></label>
+              <input type="text" class="form-control" name="bathrooms" >
+            </div>
+            bedrooms
+            <div class="mb-3">
+              <label for="description" class="form-label"></label>
+              <input type="text" class="form-control" name="bedrooms" >
+            </div>
+            levels
+            <div class="mb-3">
+              <label for="description" class="form-label"></label>
+              <input type="number" class="form-control" name="levels" >
+            </div>
+            year
+            <div class="mb-3">
+              <label for="description" class="form-label"></label>
+              <input type="number" class="form-control" name="year" >
+            </div>
+            price
+            <div class="mb-3">
+              <label for="description" class="form-label"></label>
+              <input type="number" class="form-control" name="price" >
+            </div>
+            imgUrl
+            <div class="mb-3">
+              <label for="description" class="form-label"></label>
+              <input type="url" class="form-control" name="imgUrl" >
+            </div>
+            <button type="submit" class="btn btn-primary">Add House</button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row" id="houesGoHere"></div>
+    <div class="row" id="houseGoHere"></div>
 </section>

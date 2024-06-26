@@ -21,4 +21,6 @@
     "titleBar.inactiveForeground": "#e7e7e799"
   },
   "peacock.color": "#3b9403",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "livePreview.customExternalBrowser": "Chrome",
 }

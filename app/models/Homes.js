@@ -3,7 +3,7 @@ import { AppState } from "../AppState.js";
 export class Homes {
 
     constructor(data) {
-        this.creator = data.creator.name
+        this.creator = data.creator.name;
         this.description = data.description
         this.bathrooms = data.bathrooms
         this.bedrooms = data.bedrooms
@@ -11,6 +11,7 @@ export class Homes {
         this.year = data.year
         this.price = data.price
         this.imgUrl = data.imgUrl
+        this.id = data.id || data._id
     }
 
 
@@ -22,16 +23,16 @@ export class Homes {
                <img src="${this.imgUrl}" class="card-img-top" alt="..." />
                <div class="card-body">
                    <h4 class="card-title">${this.creator}</h4>
-                <h5 class="card-title">${this.description}</h5>
+                   <h5 class="card-title">${this.description}</h5>
                    <p>${this.bathrooms} bathrooms</p>
                    <p>${this.bedrooms} bedrooms</p>
                    <p>It has ${this.levels} levels</p>
                    <p>$${this.price}</p>
                    <p>It was built in ${this.year}</p>
                    <div class="d-flex justify-content-end">
-                   <button class="btn btn-outline-danger">Demolish</button>
-    </div>
-                </div>
+                       <button class="btn btn-outline-danger" onclick="app.HomesController.demolishHouse('${this.id}')"> Demolish</button>
+                   </div>
+               </div>
            </div>
        </div>
    </div>
